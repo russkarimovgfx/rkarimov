@@ -1,0 +1,137 @@
+/* ABOUT */
+
+*{
+ margin: 0;
+ padding: 0;
+ 
+}
+
+body{
+background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(71, 70, 70, .8),rgb(0, 0, 0)),
+ url(images/PXL_20210807_102423233.jpg)  ;
+  background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+
+.about {
+  text-align: center;
+  padding-top:5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 7rem;
+  
+
+}
+
+.about-info {
+  width: 500px;
+  margin: 1rem auto;
+  padding: 3rem 3rem;
+  color: white;
+  /* border: 2px solid grey; */
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(119, 209, 126, 0.1),rgba(67, 68, 68, 0.7));
+  box-shadow: 0 15px 45px 4px rgb(61, 61, 61);
+  line-height: 1.5;
+}
+
+.about-info h1 {
+  padding: 2rem;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-two a {
+  text-decoration: none;
+}
+
+.navbar-two {
+ width: 100vw;
+height: 6rem;
+background-image: linear-gradient(rgba(255,255,255,.6),rgba(49, 45, 45, 0.6));
+display: flex;
+justify-content: center;
+ 
+
+}
+
+.navbarlink{
+width: 10rem;
+height: 6rem;
+  /* background-image: linear-gradient(rgba(255,255,255,.6),rgba(49, 45, 45, 0.6)); */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  position: relative;
+  transition: border-radius 0.2s;
+  overflow: hidden;
+
+}
+
+.navbarlink i {
+  color: #333;
+  transition: color 0.4s, font-size 0.4s;
+}
+
+.navbarlink.prevElChange {
+  border-top-right-radius: 1.3rem;
+}
+
+.navbarlink.nextElChange {
+  border-top-left-radius: 1.3rem;
+}
+
+
+.navbarlink::before {
+  content: "";
+  width: 10.4rem;
+  height: 8rem;
+ background-image: linear-gradient(rgba(255,255,255,.6),rgba(49, 45, 45, 0.6));
+  position: absolute;
+  left: -.2rem;
+top: -200%;
+transition: top .4s, background-color 0.4s .4s;
+
+border-radius: 0 0 5rem 5rem;
+}
+
+.change.navbarlink {
+background-image: linear-gradient(rgba(255,255,255,.6),rgba(49, 45, 45, 0.6));
+}
+
+.change.navbarlink::before {
+top: -100%;
+}
+
+.change.navbarlink i {
+  color: #fff;
+  font-size: 3.8rem;
+  position: relative;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 600px) {
+.ham-menu {
+ height: 50px;
+ width: 50px;
+ /* background-color: white; */
+ position: fixed;
+ top: 0;
+ right: 20px;
+ margin: 1rem;
+ display: flex;
+ flex-direction: column;
+ cursor: pointer;
+
+}
+
+.about-info {
+  width: 400px;
+}
+
+}
